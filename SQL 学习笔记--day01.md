@@ -62,3 +62,72 @@
 
   `desc table_name;` 
 
+### 1、条件查询
+
+查询出符合条件的数据
+
+语法格式：
+
+​	`select 字段一, 字段二, 字段三`
+
+​	`from 表名`
+
+​	`where 条件;` 
+
+如，一个名为`test_table`表中有`id`, `money` 两项字段
+
+* `select id, money from test_table where money >= 1000;`
+
+  查询表中`money`大于等于1000 的数据
+
+* `select id, money from test_table where money between 500 and 5000;`
+
+  查询表中`money`在区间500到5000的数据
+
+* `select id, money from test_table where money is not null;`
+
+  查询表中`money`不为空的数据
+
+* `select id, money from test_table where money >= 1000 and id > 2;`
+
+  查询表中`money`大于1000 且 id 大于2的数据
+
+* `select id, money from test_table where money >= 1000 or id > 2;`
+
+  查询表中`money`大于1000 或 id 大于2 的数据
+
+* `select id, money from test_table where money in (10, 20, 30);`
+
+  查询表中`money`在10，20，30中的数据
+
+### 2、like 模糊查询
+
+支持 `%` 或 `_` 匹配
+
+`%`  ：匹配任意多个字符
+
+`_` ：匹配任意一个字符
+
+`select * from test_table where money '%1%';`
+
+找出表中`money`含有数字1的数据
+
+`select * from test_table where money '%\_%';`
+
+找出表中`money`含有下划线的数据（用转义字符）
+
+### 3、排序
+
+`select * from test_table order by money;`
+
+查询所有数据，并按照`money`升序排列（默认升序排列，asc）
+
+`select * from test_table order by money desc;`
+
+加上`desc`，降序排列
+
+### 4、多个字段排序
+
+`select * from test_table order by money asc, id desc;`
+
+按照`money`的升序排列，如果`money`一样，则按照`id`的降序排列
