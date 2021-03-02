@@ -42,7 +42,7 @@ limit num_limit offset num_offset;
 
 通过`on`条件描述关联关系
 
-`inner join`先将两个表数据连接到一起，两个表中如果通过ID互相到不到数据，将会丢弃
+`inner join`先将两个表数据连接到一起，两个表中如果通过ID互相得不到数据，将会丢弃
 
 ## 外连接（outer joins）
 
