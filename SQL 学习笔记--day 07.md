@@ -143,4 +143,3 @@ select @@tx_isolation
 ```mysql
 set global transaction isolation level read uncommitted;
 ```
-
