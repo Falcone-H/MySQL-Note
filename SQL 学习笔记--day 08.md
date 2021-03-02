@@ -32,3 +32,4 @@ create index 索引名 on 表名(字段名);
 explain select * from 表名 where 条件;
 ```
 
+
