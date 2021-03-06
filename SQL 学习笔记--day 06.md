@@ -73,7 +73,7 @@ alter table 表名 modify column 字段名 字段类型
 ## 创建自增字段
 
 ```mysql
-create table (
+create table 表名(
 字段名1 数据类型 primary key auto_increment,
 字段名2 数据类型,
 字段名3 数据类型);
